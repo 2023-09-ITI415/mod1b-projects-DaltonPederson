@@ -493,6 +493,7 @@ GameObject:
   - component: {fileID: 642146523}
   - component: {fileID: 642146522}
   - component: {fileID: 642146521}
+  - component: {fileID: 642146524}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -574,6 +575,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &642146524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642146520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a201b765362d34057abf125430989973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basketPrefab: {fileID: 2704186562990429754, guid: 781ea580fc2884c2e871e141db0fdd42, type: 3}
+  numBaskets: 3
+  basketBottomY: -14
+  basketSpacingY: 2
 --- !u!1 &864338959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,6 +1365,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 763013417251914117, guid: 87c4fadd355f84110aa6a62f82d2ffa6, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1852074821975551696, guid: 87c4fadd355f84110aa6a62f82d2ffa6, type: 3}
       propertyPath: m_Name
       value: AppleTree
@@ -1396,6 +1417,10 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8874685627380678423, guid: 87c4fadd355f84110aa6a62f82d2ffa6, type: 3}
+      propertyPath: ApplePrefab
+      value: 
+      objectReference: {fileID: 8419635551369313225, guid: 36294f80d6eb041d68e8bebfd1dd2ed9, type: 3}
     - target: {fileID: 8874685627380678423, guid: 87c4fadd355f84110aa6a62f82d2ffa6, type: 3}
       propertyPath: leftandRightEdge
       value: 20

@@ -38,7 +38,7 @@ public class AppleTree : MonoBehaviour
 
         Invoke("DropApple", secondsBetweenAppleDrops);
 
-
+    }
 
 
         // Update is called once per frame
@@ -71,6 +71,6 @@ public class AppleTree : MonoBehaviour
 
             }
         }
-    }
+
 }
 
