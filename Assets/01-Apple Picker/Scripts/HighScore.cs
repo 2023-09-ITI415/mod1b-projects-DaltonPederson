@@ -5,20 +5,22 @@ using UnityEngine.UI;
 
 public class HighScore : MonoBehaviour
 {
+    static public int score = 1000;
+
     // Start is called before the first frame update
     void Start()
-    { static public int score = 1000;
+    {
+  
+    }
 
-        void Awake()
-        {
+    void Awake()
+    {
 
-            if (PlayerPrefs.HasKey("HighScore"))
+        if (PlayerPrefs.HasKey("HighScore"))
 
-                score = PlayerPrefs.GetInt("HighScore");
+            score = PlayerPrefs.GetInt("HighScore");
 
-            PlayerPrefs.SetInt("HighScore", score);
-        }
-        
+        PlayerPrefs.SetInt("HighScore", score);
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class HighScore : MonoBehaviour
         Text gt = this.GetComponent<Text>();
         gt.text = "High Score:" + score;
 
-        if (HighScore > PlayerPrefs.GetInt("HighScore"))
+        if (HighScore.score > PlayerPrefs.GetInt("HighScore"))
 
             PlayerPrefs.SetInt("HighScore", score);
     }

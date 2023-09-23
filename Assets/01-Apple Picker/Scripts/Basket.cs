@@ -7,9 +7,10 @@ public class Basket : MonoBehaviour
 {
     [Header("Set dynamically")]
 
-    public Text
-
-          scoreGT;
+    public Text scoreGT;    //this has to refer to a legacy Text UI object
+                            // be sure to  1) add using TMPro in using block 
+                            //             2)change datatype to TextMeshProUGUI in declaration
+                            //             3) change GetComponent datatype to TextMeshProUGUI
 
     // Start is called before the first frame update
     void Start() { 
@@ -53,7 +54,8 @@ public class Basket : MonoBehaviour
 
         void OnCollisionEnter(Collision coll)
 
-        { GameObject collidedWith =
+        {
+            GameObject collidedWith =
                 coll.gameObject;
             if (collidedWith.tag == "Apple")
 
