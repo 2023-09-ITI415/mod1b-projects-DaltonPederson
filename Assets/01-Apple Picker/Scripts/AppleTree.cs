@@ -51,6 +51,10 @@ public class AppleTree : MonoBehaviour
         Time.deltaTime;
             transform.position =
         pos;
+
+        pos.x += speed * Time.deltaTime;
+        pos.x += 1.0f * 0.04f;
+        pos.x += 0.04f;
             //Changing Direction
             if (pos.x < -leftandRightEdge)
             {                   //a

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Basket : MonoBehaviour
-{
+public class Basket : MonoBehaviour {
     [Header("Set dynamically")]
 
-    public Text
-
-          scoreGT;
+    public Text scoreGT;    //this has to refer to a legacy Text UI object
+                            // be sure to  1) add using TMPro in using block 
+                            //             2)change datatype to TextMeshProUGUI in declaration
+                            //             3) change GetComponent datatype to TextMeshProUGUI
 
     // Start is called before the first frame update
     void Start() { 
@@ -28,17 +28,14 @@ public class Basket : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         //Get the current screen position of the mouse from the input
         Vector3 mousePos2D =
             Input.mousePosition;
 
         //Camera's z position sets how far to push the mouse into 3D
 
-        mousePos2D.z = -
-
-            Camera.main.transform.position.z;
+        mousePos2D.z = -Camera.main.transform.position.z;
         //Convert the point from 2D screen space into 3D game
         //world space 
         Vector3 mousePos3D =
@@ -51,28 +48,36 @@ public class Basket : MonoBehaviour
         pos.x = mousePos3D.x;
         this.transform.position = pos;
 
-        void OnCollisionEnter(Collision coll)
+    }
 
-        { GameObject collidedWith =
-                coll.gameObject;
+    void OnCollisionEnter(Collision coll)
+        {
+            GameObject collidedWith = coll.gameObject;
+
             if (collidedWith.tag == "Apple")
-
             {
                 Destroy(collidedWith);
-
-                int score =
-
-                int.Parse(scoreGT.text);
-
-                score += 100;
-
-                scoreGT.text = score.ToString();
-
-                if (score > HighScore.score)
-                {
-                    HighScore.score = score;
-                }
             }
+
+
+
+
+
+
+            int score =
+
+                        int.Parse(scoreGT.text);
+
+            score += 100;
+
+            scoreGT.text = score.ToString();
+
+            if (score > HighScore.score)
+            {
+                HighScore.score = score;
             }
+
+        }
+
     }
-}
+
