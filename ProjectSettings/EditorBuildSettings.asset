@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00-Scenes/ApplePickerDemo.unity
     guid: ccdf3bc385a8344afad4217358e5034e
-  - enabled: 0
+  - enabled: 1
     path: Assets/00-Scenes/MissionDemolition.unity
     guid: cc17ede39b5014f3bb4c31e76964aefc
   - enabled: 1
